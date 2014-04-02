@@ -3,6 +3,7 @@ package nl.workshop.data.aggregation;
 import nl.workshop.event.EventBus;
 import nl.workshop.event.EventHandler;
 import nl.workshop.event.EventQueueIds;
+import nl.workshop.event.RiskEventBus;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +12,9 @@ public class DataAggregator implements EventHandler {
 
     public static final String RDS = "RDS";
     public static final String TDS = "TDS";
-    EventBus eventBus;
+
+
+    EventBus eventBus = new RiskEventBus();
 
     Map<String, Object> eventRdsData;
     Map<String, Object> eventTdsData;

@@ -6,10 +6,10 @@ import java.util.Map;
 public class RiskEventBus implements EventBus {
 
 	private int eventId = 0;
-	private Map<EventQueueIds, EventHandler> queues = new HashMap<EventQueueIds, EventHandler>();
+    private static Map<EventQueueIds, EventHandler> queues = new HashMap<EventQueueIds, EventHandler>();
 
-	private Map<Integer, EventHandler> events = new HashMap<Integer, EventHandler>();
-	private Map<Integer, String> contextst = new HashMap<Integer, String>();
+    private static Map<Integer, EventHandler> events = new HashMap<Integer, EventHandler>();
+    private static Map<Integer, String> contextst = new HashMap<Integer, String>();
 
 	@Override
 	public void register(EventQueueIds queueId, EventHandler registrar) {
