@@ -70,7 +70,6 @@
 				<version>${project.version}</version>
 			</dependency>
 
-            <!---->
 			<dependency>
 				<groupId>nl.workshop</groupId>
 				<artifactId>risk-data-importer</artifactId>
