@@ -6,8 +6,8 @@ public interface EventHandler {
 	
 	void register(EventQueueIds queueid);
 	
-	void handleQueuedEvent(Map<String, Object> payload, EventQueueIds eventId);
+	void handleQueuedEvent(Map<String, Object> payload, EventQueueIds eventId, String context);
 	
-	void handleResponseEvent(Map<String, Object> response);
+	void handleResponseEvent(Map<String, Object> response, String context);
 	
 }
