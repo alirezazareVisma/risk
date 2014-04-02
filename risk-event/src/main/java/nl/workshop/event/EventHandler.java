@@ -4,9 +4,9 @@ import java.util.Map;
 
 public interface EventHandler {
 	
-	void register(int queueid);
+	void register(EventQueueIds queueid);
 	
-	void handleQueuedEvent(Map<String, Object> payload, int eventId);
+	void handleQueuedEvent(Map<String, Object> payload, EventQueueIds eventId);
 	
 	void handleResponseEvent(Map<String, Object> response);
 	
